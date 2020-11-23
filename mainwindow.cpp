@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     connect(ui->pushButton_3, &QPushButton::clicked, this, [this](){
-        QString fname = QFileDialog::getSaveFileName(nullptr, "filename", ".", "Text files (*.txt)" );
+        QString fname = QFileDialog::getSaveFileName(nullptr, "filename", ".");
         if (fname.isEmpty()) {
             return;
         }
@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     connect(ui->pushButton_4, &QPushButton::clicked, this, [this](){
-        QString fname = QFileDialog::getOpenFileName(nullptr, "filename", ".", "Text files (*.txt)" );
+        QString fname = QFileDialog::getOpenFileName(nullptr, "filename", ".");
         if (fname.isEmpty()) {
             return;
         }
