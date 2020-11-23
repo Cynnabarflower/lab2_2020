@@ -215,7 +215,7 @@ public:
         throw std::runtime_error(std::string("No such key "+key.toString()));
     }
 
-    std::vector<K> keys() {
+    std::vector<K> keys() const {
         std::vector<K> keys;
         for (const auto& a : *table)
             for (const auto& e : a) {
